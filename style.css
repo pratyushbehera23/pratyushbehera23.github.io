@@ -1,11 +1,11 @@
 .container{
-    max-width: 100rem;
+    max-width: 120rem;
     margin: 0 auto;
     padding: 0 2rem;
 }
 
 .header{
-    padding: 2rem 0;
+    padding: 2rem 4rem;
     display: flex;
     justify-content: space-between;
 }
@@ -24,9 +24,49 @@
     gap: 1rem;
 }
 
+.info{
+    text-align: center;
+    font-size: 2rem;
+    margin: 2rem;
+}
+
+.projects{
+    /* border: 1px dotted #777; */
+    padding: 2rem;
+}
+
+.blogs{
+    /* border: 1px dotted #777; */
+    padding: 2rem;
+}
+
+.wrapper{
+    /* border: 1px dashed #0f0; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.card{
+    border: 1px dashed var(--color-2);
+    padding: 2rem;
+    transition: all 0.5s;
+    min-width: 24rem;
+}
+.card:hover{
+    border: 1px dashed var(--color-3);
+}
+
+.contact{
+    border: 1px dashed var(--color-2);
+    margin: 2rem;
+}
+
 .footer{
     padding: 2rem 0;
     font-size: 1.2rem;
     color: var(--color-3);
     text-align: center;
+    border-top: 1px dashed #222;
 }
