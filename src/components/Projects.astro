@@ -1,0 +1,46 @@
+---
+const projects = [
+    {
+        id: 1,
+        title: "hww",
+        desc: "dcbbljwvncl/w",
+        img: "",
+        link: "",
+    },
+    {
+        id: 2,
+        title: "new prj",
+        desc: "jkceb3hobc",
+        img: "",
+        link: "#",
+    },
+    {
+        id: 3,
+        title: "Proj name",
+        desc: "This is proj description.",
+        img: "",
+        link: "",
+    },
+    {
+        id: 4,
+        title: "new prj",
+        desc: "jkceb3hobc",
+        img: "",
+        link: "#",
+    },
+];
+---
+
+<div class="projects">
+    <h2>Projects</h2>
+    <ul class="wrapper">
+        {projects.map(project => (
+            <li class="card">
+                <a href={project.link}>
+                    <h3>{project.title}</h3>
+                    <p>{project.desc}</p>
+                </a>
+            </li>
+        ))}
+    </ul>
+</div>

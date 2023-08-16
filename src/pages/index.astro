@@ -1,0 +1,37 @@
+---
+// Layout
+import Layout from '../layouts/Layout.astro';
+// Components
+import Projects from '../components/Projects.astro';
+import Posts from '../components/Posts.astro';
+import About from '../components/About.astro';
+// Styles
+import '../styles/general.css'
+import '../styles/style.css'
+import Contact from '../components/Contact.astro';
+---
+
+<Layout title="Pratyush Behera">
+	<div class="container">
+		<!-- HEADER -->
+        <header class="header">
+            <a href="">P_</a>
+            <nav class="nav">
+                <li><a href="">Home</a></li>
+                <li><a href="">Blogs</a></li>
+            </nav>
+        </header>
+    
+        <main class="main">
+            <About />
+			<Projects />
+			<Posts />
+			<Contact />
+        </main>
+        
+		<!-- FOOTER -->
+        <footer class="footer">    
+            <p> &copy; Pratyush 2023 | <a href="/links">Links</a></p>
+        </footer>
+    </div>
+</Layout>

@@ -1,0 +1,46 @@
+---
+const posts = [
+    {
+        id: 1,
+        title: "hww",
+        desc: "dcbbljwvncl/w",
+        img: "",
+        link: "",
+    },
+    {
+        id: 2,
+        title: "new prj",
+        desc: "jkceb3hobc",
+        img: "",
+        link: "#",
+    },
+    {
+        id: 3,
+        title: "Proj name",
+        desc: "This is proj description.",
+        img: "",
+        link: "",
+    },
+    {
+        id: 4,
+        title: "new prj",
+        desc: "jkceb3hobc",
+        img: "",
+        link: "#",
+    },
+];
+---
+
+<div class="posts">
+    <h2>Posts</h2>
+    <ul class="wrapper">
+        {posts.map(post => (
+            <li class="card">
+                <a href={post.link}>
+                    <h3>{post.title}</h3>
+                    <p>{post.desc}</p>
+                </a>
+            </li>
+        ))}
+    </ul>
+</div>
