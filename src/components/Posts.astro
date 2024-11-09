@@ -1,44 +1,58 @@
 ---
-const posts = [
-    {
-        id: 1,
-        title: "hww",
-        desc: "dcbbljwvncl/w",
-        img: "",
-        link: "",
-    },
-    {
-        id: 2,
-        title: "new prj",
-        desc: "jkceb3hobc",
-        img: "",
-        link: "#",
-    },
-    {
-        id: 3,
-        title: "Proj name",
-        desc: "This is proj description.",
-        img: "",
-        link: "",
-    },
-    {
-        id: 4,
-        title: "new prj",
-        desc: "jkceb3hobc",
-        img: "",
-        link: "#",
-    },
-];
+// const posts = [
+//     {
+//         id: 1,
+//         title: "Post title 1",
+//         desc: "Description 1",
+//         img: "",
+//         link: "",
+//     },
+//     {
+//         id: 2,
+//         title: "Post title 2",
+//         desc: "Description 2",
+//         img: "",
+//         link: "",
+//     },
+//     {
+//         id: 3,
+//         title: "Post title 3",
+//         desc: "Description 3.",
+//         img: "",
+//         link: "",
+//     },
+//     {
+//         id: 4,
+//         title: "Post title 4",
+//         desc: "Description 4",
+//         img: "",
+//         link: "",
+//     },
+// ];
+
+// Posts info directly fetched from 'Posts' folder:
+const posts = await Astro.glob('../posts/*.md');
 ---
 
 <div class="posts">
     <h2>Posts</h2>
     <ul class="wrapper">
-        {posts.map(post => (
+
+        <!-- Post from the array: -->
+        <!-- {posts.map(post => (
             <li class="card">
                 <a href={post.link}>
                     <h3>{post.title}</h3>
                     <p>{post.desc}</p>
+                </a>
+            </li>
+        ))} -->
+        
+        {posts.map(post => (
+            <li class="card">
+                <a class="btn" href={`/${post.frontmatter.slug}`}>
+                    <h3 style="margin: 0;">{post.frontmatter.title}</h3>
+                    <p>{post.frontmatter.excerpt}</p>
                 </a>
             </li>
         ))}
